@@ -14,9 +14,13 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector2 moovement = new Vector2(horizontalInput, verticalInput).normalized;
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(new Vector2(5, 0));
+            rb.AddForce(new Vector2(5 , 0));
         }
         if (Input.GetKey(KeyCode.A))
         {
