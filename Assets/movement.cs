@@ -5,6 +5,8 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     Rigidbody2D rb;
+    [SerializeField]
+    float speed = 50;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,21 +16,12 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.AddForce(new Vector2(5, 0));
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.AddForce(new Vector2(-5, 0));
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.AddForce(new Vector2(0, 5));
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.AddForce(new Vector2(0, -5));
-        }
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector2 movement = new Vector2(horizontalInput, verticalInput);
+
+            rb.AddForce(movement * speed * Time.deltaTime);
+
     } 
 }
