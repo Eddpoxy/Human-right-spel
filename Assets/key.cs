@@ -8,7 +8,7 @@ public class key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangeObjectTransparency(0);
+       
     }
 
     // Update is called once per frame
@@ -17,7 +17,12 @@ public class key : MonoBehaviour
         if (movement.key == true)
         {
             ChangeObjectTransparency(1);
+        } 
+        else
+        {
+            ChangeObjectTransparency(0);
         }
+
     
     }
     void ChangeObjectTransparency(float alpha)

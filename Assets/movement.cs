@@ -13,12 +13,15 @@ public class movement : MonoBehaviour
     float speed = 50;
     public static bool alive;
     public static bool key;
-    int randomVariable; 
+    public static bool children;
+    int randomVariable;  
+    
     // Start is called before the first frame update
     void Start()
     {
         alive = true;
         key = false;
+        children = false;
         rb = GetComponent<Rigidbody2D>();
         randomVariable = Random.Range(0, 4);
         
@@ -42,6 +45,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name == ("Santa"))
         {
             Destroy(gameObject);
+            alive = false;
         }
         if (collision.gameObject.name.Contains("Present"))
         {
@@ -52,6 +56,18 @@ public class movement : MonoBehaviour
             Destroy(collision.gameObject);
             key = true;
         }
+        if (collision.gameObject.name == ("basement") && key == true)
+        {
+            Destroy(collision.gameObject);
+            children = true;
+            key = false;
+        }
+        if (collision.gameObject.name == ("Exit") && children == true)
+        {
+            Destroy(gameObject);
+            
+        }
+
     }
 
 }
