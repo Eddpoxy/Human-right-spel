@@ -1,3 +1,4 @@
+using NavMeshPlus.Components;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ using Random = UnityEngine.Random;
 public class movement : MonoBehaviour
 {
     Rigidbody2D rb;
+    public NavMeshSurface navMesh;
+    public GameObject basement;
     [SerializeField]
     float speed = 50;
     public static bool alive;
@@ -19,6 +22,7 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         alive = true;
         key = false;
         children = false;
@@ -58,9 +62,11 @@ public class movement : MonoBehaviour
         }
         if (collision.gameObject.name == ("basement") && key == true)
         {
-            Destroy(collision.gameObject);
+            basement.transform.position = new Vector3(10000,0,0);
             children = true;
             key = false;
+            navMesh.BuildNavMesh();
+    
         }
         if (collision.gameObject.name == ("Exit") && children == true)
         {
