@@ -7,7 +7,7 @@ public class Minion : MonoBehaviour
 {
     [SerializeField] Transform target;
     NavMeshAgent agent;
- 
+    movement movement;
 
 
     // Start is called before the first frame update
@@ -24,6 +24,6 @@ public class Minion : MonoBehaviour
     void Update()
     {
         agent.SetDestination(target.position);
-
+    
     }
 }

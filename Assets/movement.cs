@@ -17,6 +17,7 @@ public class movement : MonoBehaviour
     public static bool alive;
     public static bool key;
     public static bool children;
+    public static bool escape;
     int randomVariable;  
     
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class movement : MonoBehaviour
         alive = true;
         key = false;
         children = false;
+        escape = false;
         rb = GetComponent<Rigidbody2D>();
         randomVariable = Random.Range(0, 4);
         
@@ -70,6 +72,8 @@ public class movement : MonoBehaviour
         }
         if (collision.gameObject.name == ("Exit") && children == true)
         {
+            escape = true;
+            Debug.Log("ohio");
             Destroy(gameObject);
             
         }
