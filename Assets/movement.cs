@@ -10,11 +10,13 @@ public class movement : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField]
-    float speed = 50;
+    public float speed = 50f;
+    public float speedPowerUp = 25f;
     public static bool alive;
     public static bool key;
     public static bool children;
-    int randomVariable;  
+    int randomVariable;
+
     
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,16 @@ public class movement : MonoBehaviour
 
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
 
-            rb.AddForce(movement * speed * Time.deltaTime);
+         rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse);
+
+        if(Powerup.isPickedUp == true)
+        {
+            speed += speedPowerUp;
+
+            Powerup.isPickedUp = false;
+        }
+
+        Debug.Log(speed);
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -70,4 +81,6 @@ public class movement : MonoBehaviour
 
     }
 
+
+    
 }
