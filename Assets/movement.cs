@@ -16,10 +16,15 @@ public class movement : MonoBehaviour
     public GameObject basement;
     public GameObject text;
     [SerializeField]
-    float speed = 50;
+    public float speed = 50f;
+    public float speedPowerUp = 25f;
     public static bool alive;
     public static bool key;
     public static bool children;
+
+    int randomVariable;
+
+
     public static bool escape;
     int randomVariablePower;
     int randomVariable;  
@@ -48,7 +53,16 @@ public class movement : MonoBehaviour
 
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
 
-            rb.AddForce(movement * speed * Time.deltaTime);
+         rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse);
+
+        if(Powerup.isPickedUp == true)
+        {
+            speed += speedPowerUp;
+
+            Powerup.isPickedUp = false;
+        }
+
+        Debug.Log(speed);
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
