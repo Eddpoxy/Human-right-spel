@@ -13,7 +13,8 @@ public class movement : MonoBehaviour
     Rigidbody2D rb; 
  
     public NavMeshSurface navMesh;
-    public GameObject basement; 
+    public GameObject basement;
+    public GameObject text;
     [SerializeField]
     public float speed = 50f;
     public float speedPowerUp = 25f;
@@ -21,12 +22,10 @@ public class movement : MonoBehaviour
     public static bool key;
     public static bool children;
 
-    int randomVariable;
-
 
     public static bool escape;
-    int RandomVariable;  
-
+    int randomVariablePower;
+    int randomVariable;  
     
     // Start is called before the first frame update
     void Start()
@@ -38,7 +37,8 @@ public class movement : MonoBehaviour
         escape = false;
         rb = GetComponent<Rigidbody2D>();
         randomVariable = Random.Range(0, 4);
-        
+        randomVariablePower = Random.Range(0, 4);
+        Debug.Log("Present (" + randomVariablePower + ")");
         Debug.Log("Present (" + randomVariable + ")");
     }
 
@@ -78,7 +78,17 @@ public class movement : MonoBehaviour
         {
             Destroy(collision.gameObject);
             key = true;
+        } 
+        else
+        {
+            Instantiate(text, transform.position + new Vector3(0,1,0), Quaternion.identity);
         }
+        if (collision.gameObject.name == ("Present (" + randomVariablePower + ")"))
+        { 
+           speed *= 2;
+           Invoke("powerup", 5f);
+        }
+
         if (collision.gameObject.name == ("basement") && key == true)
         {
             TilemapCollider2D basementCollision = basement.GetComponent<TilemapCollider2D>();
@@ -100,7 +110,8 @@ public class movement : MonoBehaviour
         }
 
     }
-
-
-    
+    void powerup()
+    {
+        speed /= 2;
+    }
 }
