@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f35f86bfe1b21eb4fb0408ca922a3f6b
+guid: 9c1fc56b2bad15747b40a7c5c0cfed63
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "P\xF6jk back walk_0"
+      name: "P\xF6jk fram walk_0"
       rect:
         serializedVersion: 2
         x: 15
@@ -124,19 +124,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39d3e96830f9a3348a6072c3cb24d50f
-      internalID: 479516128
+      spriteID: a257be99dd0a7ca45ade9717d2b06383
+      internalID: 1041238259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "P\xF6jk back walk_1"
+      name: "P\xF6jk fram walk_1"
       rect:
         serializedVersion: 2
         x: 116
         y: 1
-        width: 71
+        width: 69
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5df24b0313aea942b352e44b6b31352
+      internalID: 745913405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "P\xF6jk fram walk_2"
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2
+        width: 76
         height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,35 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec767c742cdf7c84ab9ed4cbd84ce619
-      internalID: -1718480757
+      spriteID: a580ed09c60d4eb4ea8183e305ff668d
+      internalID: 1408854264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "P\xF6jk back walk_2"
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 2
-        width: 76
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af6c341a495aa284fb4e17aa05a48e1f
-      internalID: 1150166477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "P\xF6jk back walk_3"
+      name: "P\xF6jk fram walk_3"
       rect:
         serializedVersion: 2
         x: 315
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ccfed8657a579543a80efa55d7f1951
-      internalID: -1046807986
+      spriteID: 02d53636b585f0340be87f1a64d3ef2e
+      internalID: -1232676987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "P\xF6jk back walk_4"
+      name: "P\xF6jk fram walk_4"
       rect:
         serializedVersion: 2
         x: 418
         y: 1
-        width: 70
-        height: 166
+        width: 67
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08d181e6b3f3c694a8b08659b1c374b7
-      internalID: 1233873770
+      spriteID: d7ebdf1e0771cd443b2c2a86d98d8a71
+      internalID: -1444659725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "P\xF6jk back walk_5"
+      name: "P\xF6jk fram walk_5"
       rect:
         serializedVersion: 2
         x: 515
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a32297ee83a724d982127159419cef
-      internalID: 1047373113
+      spriteID: 964bfd5a3fe100149ad27baf9b537a21
+      internalID: -245779294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "P\xF6jk back walk_6"
+      name: "P\xF6jk fram walk_6"
       rect:
         serializedVersion: 2
         x: 616
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fe11e5df102f84e841bf068b1710b7
-      internalID: 50990401
+      spriteID: 4e18ef8c3deeea645a0acbda3adcebd7
+      internalID: 1067700485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "P\xF6jk back walk_7"
+      name: "P\xF6jk fram walk_7"
       rect:
         serializedVersion: 2
         x: 715
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71c2864b04426554fb33a96ad7902abd
-      internalID: -2006158355
+      spriteID: 53194802197e416449b0a7fc7623ea12
+      internalID: 180876355
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "P\xF6jk back walk_0": 479516128
-      "P\xF6jk back walk_1": -1718480757
-      "P\xF6jk back walk_2": 1150166477
-      "P\xF6jk back walk_3": -1046807986
-      "P\xF6jk back walk_4": 1233873770
-      "P\xF6jk back walk_5": 1047373113
-      "P\xF6jk back walk_6": 50990401
-      "P\xF6jk back walk_7": -2006158355
+      "P\xF6jk fram walk_0": 1041238259
+      "P\xF6jk fram walk_1": 745913405
+      "P\xF6jk fram walk_2": 1408854264
+      "P\xF6jk fram walk_3": -1232676987
+      "P\xF6jk fram walk_4": -1444659725
+      "P\xF6jk fram walk_5": -245779294
+      "P\xF6jk fram walk_6": 1067700485
+      "P\xF6jk fram walk_7": 180876355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

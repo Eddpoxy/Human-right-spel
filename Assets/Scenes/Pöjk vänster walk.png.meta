@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f35f86bfe1b21eb4fb0408ca922a3f6b
+guid: 76ae6334e45e21a40b49c0a525f57f7b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,139 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "P\xF6jk back walk_0"
+      name: "P\xF6jk v\xE4nster walk_0"
       rect:
         serializedVersion: 2
-        x: 15
-        y: 6
-        width: 73
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39d3e96830f9a3348a6072c3cb24d50f
-      internalID: 479516128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "P\xF6jk back walk_1"
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 1
-        width: 71
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec767c742cdf7c84ab9ed4cbd84ce619
-      internalID: -1718480757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "P\xF6jk back walk_2"
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 2
-        width: 76
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af6c341a495aa284fb4e17aa05a48e1f
-      internalID: 1150166477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "P\xF6jk back walk_3"
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 6
-        width: 73
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ccfed8657a579543a80efa55d7f1951
-      internalID: -1046807986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "P\xF6jk back walk_4"
-      rect:
-        serializedVersion: 2
-        x: 418
-        y: 1
-        width: 70
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08d181e6b3f3c694a8b08659b1c374b7
-      internalID: 1233873770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "P\xF6jk back walk_5"
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 2
-        width: 73
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75a32297ee83a724d982127159419cef
-      internalID: 1047373113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "P\xF6jk back walk_6"
-      rect:
-        serializedVersion: 2
-        x: 616
-        y: 6
+        x: 13
+        y: 8
         width: 72
-        height: 168
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fe11e5df102f84e841bf068b1710b7
-      internalID: 50990401
+      spriteID: c7431bdacef493248bf46d6672c6a310
+      internalID: -1508188257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "P\xF6jk back walk_7"
+      name: "P\xF6jk v\xE4nster walk_1"
       rect:
         serializedVersion: 2
-        x: 715
-        y: 10
-        width: 73
-        height: 166
+        x: 110
+        y: 9
+        width: 75
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +145,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71c2864b04426554fb33a96ad7902abd
-      internalID: -2006158355
+      spriteID: 2189eee765571cc4e968e4bdcdde3449
+      internalID: -562287818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "P\xF6jk v\xE4nster walk_2"
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 10
+        width: 67
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f464ed9a402ee4196a3c998f8e389f
+      internalID: 232415572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "P\xF6jk v\xE4nster walk_3"
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 9
+        width: 74
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41691c8aa10cc224e869c5b9a0f91d30
+      internalID: 2041476706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "P\xF6jk v\xE4nster walk_4"
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 8
+        width: 76
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0363b5a61fae1214aa8e04d4ed7489c7
+      internalID: 1797645093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "P\xF6jk v\xE4nster walk_5"
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 9
+        width: 67
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b833771c598964e94e9ca9330d65b5
+      internalID: 937787959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "P\xF6jk v\xE4nster walk_6"
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 10
+        width: 70
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0519b3f85de43074093172d2dad5de75
+      internalID: -1313849104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "P\xF6jk v\xE4nster walk_7"
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 7
+        width: 67
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96015cc173b2d1b4b9aa78b50952eaf5
+      internalID: -1542966147
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "P\xF6jk back walk_0": 479516128
-      "P\xF6jk back walk_1": -1718480757
-      "P\xF6jk back walk_2": 1150166477
-      "P\xF6jk back walk_3": -1046807986
-      "P\xF6jk back walk_4": 1233873770
-      "P\xF6jk back walk_5": 1047373113
-      "P\xF6jk back walk_6": 50990401
-      "P\xF6jk back walk_7": -2006158355
+      "P\xF6jk v\xE4nster walk_0": -1508188257
+      "P\xF6jk v\xE4nster walk_1": -562287818
+      "P\xF6jk v\xE4nster walk_2": 232415572
+      "P\xF6jk v\xE4nster walk_3": 2041476706
+      "P\xF6jk v\xE4nster walk_4": 1797645093
+      "P\xF6jk v\xE4nster walk_5": 937787959
+      "P\xF6jk v\xE4nster walk_6": -1313849104
+      "P\xF6jk v\xE4nster walk_7": -1542966147
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
