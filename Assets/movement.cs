@@ -3,15 +3,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 
 
 public class movement : MonoBehaviour
 {
-    Rigidbody2D rb;
+    Rigidbody2D rb; 
+ 
     public NavMeshSurface navMesh;
-    public GameObject basement;
+    public GameObject basement; 
     [SerializeField]
     public float speed = 50f;
     public float speedPowerUp = 25f;
@@ -79,7 +81,11 @@ public class movement : MonoBehaviour
         }
         if (collision.gameObject.name == ("basement") && key == true)
         {
-            basement.transform.position = new Vector3(10000,0,0);
+            TilemapCollider2D basementCollision = basement.GetComponent<TilemapCollider2D>();
+            NavMeshModifier basementaicollision = basement.GetComponent<NavMeshModifier>();
+         
+            basementaicollision.area = 0;
+            basementCollision.enabled = false;
             children = true;
             key = false;
             navMesh.BuildNavMesh();
@@ -88,7 +94,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name == ("Exit") && children == true)
         {
             escape = true;
-            Debug.Log("ohio");
+            
             Destroy(gameObject);
             
         }
