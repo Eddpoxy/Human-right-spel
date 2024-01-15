@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
@@ -21,7 +22,7 @@ public class movement : MonoBehaviour
     public static bool alive;
     public static bool key;
     public static bool children;
-
+    private Vector2 moveInput;
 
     public static bool escape;
     int randomVariablePower;
@@ -59,17 +60,10 @@ public class movement : MonoBehaviour
 
             Powerup.isPickedUp = false;
         } 
-        if (rb.velocity.y == 0 && rb.velocity.x == 0)
-        {
-
-        }
-        if (rb.velocity.y > 0)
-        {
-            animator.SetTrigger("Player_WalkUp");
-        }
         
 
-    }
+    } 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == ("Santa"))
@@ -119,8 +113,26 @@ public class movement : MonoBehaviour
         }
 
     }
+    private void FixedUpdate()
+    {
+        if (moveInput != Vector2.zero)
+        {
+            
+        }
+    }
     void powerup()
     {
         speed /= 2;
     }
+    public void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();  
+        if (moveInput != Vector2.zero)
+        {
+            animator.SetFloat("XInput", moveInput.x);
+            animator.SetFloat("YInput", moveInput.y);
+        }
+     
+    }
 }
+
