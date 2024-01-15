@@ -10,8 +10,8 @@ using Random = UnityEngine.Random;
 
 public class movement : MonoBehaviour
 {
-    Rigidbody2D rb; 
- 
+    Rigidbody2D rb;
+    Animator animator;
     public NavMeshSurface navMesh;
     public GameObject basement;
     public GameObject text;
@@ -30,7 +30,7 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
         alive = true;
         key = false;
         children = false;
@@ -58,9 +58,16 @@ public class movement : MonoBehaviour
             speed += speedPowerUp;
 
             Powerup.isPickedUp = false;
-        }
+        } 
+        if (rb.velocity.y == 0 && rb.velocity.x == 0)
+        {
 
-        Debug.Log(speed);
+        }
+        if (rb.velocity.y > 0)
+        {
+            animator.SetTrigger("Player_WalkUp");
+        }
+        
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -73,6 +80,10 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name.Contains("Present"))
         {
             Destroy(collision.gameObject);
+            
+            
+            Instantiate(text, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            
         }
         if (collision.gameObject.name == ("Present (" + randomVariable + ")"))
         {
@@ -80,9 +91,7 @@ public class movement : MonoBehaviour
             key = true;
         } 
         else
-        {
-            Instantiate(text, transform.position + new Vector3(0,1,0), Quaternion.identity);
-        }
+        
         if (collision.gameObject.name == ("Present (" + randomVariablePower + ")"))
         { 
            speed *= 2;
