@@ -5,6 +5,7 @@ using UnityEngine;
 public class key : MonoBehaviour
 {
     movement movement;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,44 +17,15 @@ public class key : MonoBehaviour
     {
         if (movement.key == true)
         {
-            ChangeObjectTransparency(1);
+            transform.position = new Vector3(player.transform.position.x + -1, player.transform.position.y, -1 );
         } 
         else
         {
-            ChangeObjectTransparency(0);
+            transform.position = new Vector2(10000000,1000000000);
         }
 
     
     }
-    void ChangeObjectTransparency(float alpha)
-    {
-        // Ensure there is a renderer component attached to the object
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            // Get the current material of the object
-            Material material = renderer.material;
-
-            // Change the shader to one that supports transparency
-            material.shader = Shader.Find("Standard");
-
-            // Set the rendering mode to transparent
-            material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-            material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-            material.SetInt("_ZWrite", 0);
-            material.DisableKeyword("_ALPHATEST_ON");
-            material.EnableKeyword("_ALPHABLEND_ON");
-            material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-            material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
-
-            // Set the alpha component to the desired transparency level
-            Color color = material.color;
-            color.a = alpha;
-            material.color = color;
-        }
-        else
-        {
-            Debug.LogError("No renderer component found on the object.");
-        }
-    }
+  
+   
 }
