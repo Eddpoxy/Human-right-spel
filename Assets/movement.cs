@@ -22,8 +22,6 @@ public class movement : MonoBehaviour
     public static bool key;
     public static bool children;
 
-    int randomVariable;
-
 
     public static bool escape;
     int randomVariablePower;
