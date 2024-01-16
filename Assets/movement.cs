@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 public class movement : MonoBehaviour
 {
     Rigidbody2D rb;
-    Animator animator;
+    public Animator animator;
     public NavMeshSurface navMesh;
     public GameObject basement;
     public GameObject text;
@@ -22,12 +22,12 @@ public class movement : MonoBehaviour
     public static bool alive;
     public static bool key;
     public static bool children;
-    private Vector2 moveInput;
+    Vector2 moveInput;
 
     public static bool escape;
     int randomVariablePower;
-    int randomVariable;  
-    
+    int randomVariable;
+    float horizontalMove = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,8 +45,12 @@ public class movement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        
+    {
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Horizontal", moveInput.x);
+        animator.SetFloat("Vertical", moveInput.y);
+        animator.SetFloat("Speed", moveInput.sqrMagnitude);
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -74,8 +78,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name.Contains("Present"))
         {
             Destroy(collision.gameObject);
-            
-            
+            if (collision.gameObject.name != "Present (" + randomVariable + ")" && collision.gameObject.name != ("Present (" + randomVariablePower + ")"))
             Instantiate(text, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
             
         }
@@ -115,10 +118,7 @@ public class movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (moveInput != Vector2.zero)
-        {
-            
-        }
+        
     }
     void powerup()
     {
