@@ -2252,9 +2252,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df0d1de78e48e84fa922ae947b43d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   navMesh: {fileID: 1019459556}
   basement: {fileID: 711507482}
   text: {fileID: 5964662659083087008, guid: 7c12e24e27ba2c54b9dd6899a9d8d8e3, type: 3}
+  shoe: {fileID: 3282510471710109317, guid: 4adda272e4ea96744afd84187eff9728, type: 3}
   speed: 50
   speedPowerUp: 25
 --- !u!212 &1619468124

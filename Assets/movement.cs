@@ -16,6 +16,7 @@ public class movement : MonoBehaviour
     public NavMeshSurface navMesh;
     public GameObject basement;
     public GameObject text;
+    public GameObject shoe;
     [SerializeField]
     public float speed = 50f;
     public float speedPowerUp = 25f;
@@ -93,6 +94,7 @@ public class movement : MonoBehaviour
         { 
            speed *= 2;
            Invoke("powerup", 5f);
+            Instantiate(shoe, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
 
         if (collision.gameObject.name == ("basement") && key == true)
@@ -124,15 +126,6 @@ public class movement : MonoBehaviour
     {
         speed /= 2;
     }
-    public void OnMove(InputValue value)
-    {
-        moveInput = value.Get<Vector2>();  
-        if (moveInput != Vector2.zero)
-        {
-            animator.SetFloat("XInput", moveInput.x);
-            animator.SetFloat("YInput", moveInput.y);
-        }
-     
-    }
+ 
 }
 
