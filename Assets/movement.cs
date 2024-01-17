@@ -26,6 +26,7 @@ public class movement : MonoBehaviour
     public AudioSource tear;
     public AudioSource santa;
     public AudioSource walk;
+    public AudioSource door;
     Vector2 moveInput;
    
     public static bool escape;
@@ -122,7 +123,7 @@ public class movement : MonoBehaviour
         {
             TilemapCollider2D basementCollision = basement.GetComponent<TilemapCollider2D>();
             NavMeshModifier basementaicollision = basement.GetComponent<NavMeshModifier>();
-         
+            door.Play();
             basementaicollision.area = 0;
             basementCollision.enabled = false;
             children = true;

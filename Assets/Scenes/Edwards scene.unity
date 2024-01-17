@@ -5541,7 +5541,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.09
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5765,6 +5765,7 @@ MonoBehaviour:
   tear: {fileID: 1619468126}
   santa: {fileID: 50029274}
   walk: {fileID: 1619468128}
+  door: {fileID: 0}
 --- !u!212 &1619468124
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14553,7 +14554,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18314,16 +18315,16 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 8a69e52c6bb0aef4691db615b339cdef, type: 3}
   - m_RefCount: 74
     m_Data: {fileID: 21300000, guid: 00ccde67519e8a649b2f8d530c72f3ed, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: e02801a653eac7741a4dcd74b61f34f1, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 18
     m_Data: {fileID: 21300000, guid: 72aa9b9a39b234448b103f7b6064853a, type: 3}
   - m_RefCount: 17
     m_Data: {fileID: 21300000, guid: 845723512c42b34438ad1a2fb99c304c, type: 3}
   - m_RefCount: 723
     m_Data: {fileID: 21300000, guid: ac18374d0bae6094489392c407786bf1, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: e02801a653eac7741a4dcd74b61f34f1, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1194
     m_Data:
