@@ -23,8 +23,11 @@ public class movement : MonoBehaviour
     public static bool alive;
     public static bool key;
     public static bool children;
+    public AudioSource tear;
+    public AudioSource santa;
+    public AudioSource walk;
     Vector2 moveInput;
-
+   
     public static bool escape;
     int randomVariablePower;
     int randomVariable;
@@ -33,6 +36,7 @@ public class movement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        
         alive = true;
         key = false;
         children = false;
@@ -47,6 +51,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", moveInput.x);
@@ -57,9 +62,24 @@ public class movement : MonoBehaviour
 
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
 
-         rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse);
+         rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse); 
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
+        { 
+            if (!walk.isPlaying)
+            {
+                walk.Play();
+            }
+           
+        }  
+        else
+        {
+            walk.Stop();
+        }
+      
+        
+     
 
-        if(Powerup.isPickedUp == true)
+        if (Powerup.isPickedUp == true)
         {
             speed += speedPowerUp;
 
@@ -75,13 +95,14 @@ public class movement : MonoBehaviour
         {
             Destroy(gameObject);
             alive = false;
+            santa.Play();
         }
         if (collision.gameObject.name.Contains("Present"))
         {
             Destroy(collision.gameObject);
             if (collision.gameObject.name != "Present (" + randomVariable + ")" && collision.gameObject.name != ("Present (" + randomVariablePower + ")"))
             Instantiate(text, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-            
+            tear.Play();
         }
         if (collision.gameObject.name == ("Present (" + randomVariable + ")"))
         {
@@ -93,7 +114,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name == ("Present (" + randomVariablePower + ")"))
         { 
            speed *= 2;
-           Invoke("powerup", 5f);
+           Invoke("powerup", 15f);
             Instantiate(shoe, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
 
@@ -118,10 +139,8 @@ public class movement : MonoBehaviour
         }
 
     }
-    private void FixedUpdate()
-    {
+
         
-    }
     void powerup()
     {
         speed /= 2;

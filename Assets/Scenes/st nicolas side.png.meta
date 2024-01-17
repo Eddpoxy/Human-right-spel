@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2d50f4ef62cc344a962bd3816aa775c
+guid: eca53d73cbe85ae4f8f2a1afe24f7e60
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: st nicolas_0
+      name: st nicolas side_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 16
-        width: 144
+        x: 44
+        y: 11
+        width: 112
         height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,61 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2649aaac83a2304448bbd8aba350737c
-      internalID: 239664892
+      spriteID: 552e70b43e210a646aaa6a2f1ca6db27
+      internalID: -648692483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st nicolas_1
+      name: st nicolas side_1
       rect:
         serializedVersion: 2
-        x: 228
-        y: 19
-        width: 144
-        height: 281
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4681f9470ef322429c0cbcd0794491d
-      internalID: 1917312147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: st nicolas_2
-      rect:
-        serializedVersion: 2
-        x: 428
-        y: 17
-        width: 144
-        height: 282
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 430841957e1cdc649b0abfeb42ea0bac
-      internalID: 1122044898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: st nicolas_3
-      rect:
-        serializedVersion: 2
-        x: 628
+        x: 244
         y: 13
-        width: 144
+        width: 112
         height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72f87a9ca53c0bb45a4a8853552188bd
-      internalID: 1949443005
+      spriteID: 24261a97abd1b6340a400af0db2303aa
+      internalID: 1946200957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st nicolas_4
+      name: st nicolas side_2
       rect:
         serializedVersion: 2
-        x: 828
-        y: 2
-        width: 144
-        height: 291
+        x: 444
+        y: 16
+        width: 112
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8a2f82b05bd9b44faf503856c6082bf
-      internalID: 2130843332
+      spriteID: 0e559a465e1039f48a4954000e6a8285
+      internalID: -834357579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st nicolas_5
+      name: st nicolas side_3
       rect:
         serializedVersion: 2
-        x: 1028
+        x: 644
         y: 14
-        width: 144
+        width: 112
         height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -229,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3324b6ca2989f4dbf75ba227e0f5bc
-      internalID: 1438027583
+      spriteID: 554279cb84399cc468f697707288582c
+      internalID: -1584796608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st nicolas_6
+      name: st nicolas side_4
       rect:
         serializedVersion: 2
-        x: 42
-        y: 2
-        width: 119
-        height: 9
+        x: 844
+        y: 10
+        width: 112
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,83 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3778378c5d035f148bf874795b72a420
-      internalID: 797022735
+      spriteID: 21e177844c93eb442afb282a7f1007bb
+      internalID: -106382445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: st nicolas_7
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 2
-        width: 119
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f34a975e44ccab64c9d7d5cd88d33f55
-      internalID: -1179725149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: st nicolas_8
-      rect:
-        serializedVersion: 2
-        x: 442
-        y: 2
-        width: 119
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a8804ebfd2a26049be6d444bedafac7
-      internalID: -421168452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: st nicolas_9
-      rect:
-        serializedVersion: 2
-        x: 642
-        y: 2
-        width: 119
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fc4ddb6e29f91c4393ab151bbc566aa
-      internalID: -26860900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: st nicolas_10
+      name: st nicolas side_5
       rect:
         serializedVersion: 2
         x: 1042
         y: 2
         width: 119
-        height: 9
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,8 +229,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52e8012ff0a29224db3414b901d0c702
-      internalID: 1888290751
+      spriteID: 0a25e2602b39e6642b0b7f0fa78d1c07
+      internalID: -1533138558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st nicolas side_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2
+        width: 119
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314d6f2f92b14564e8641a431523118d
+      internalID: -1684405511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st nicolas side_7
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 2
+        width: 119
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a3de306465dd743ad191ff3717293a
+      internalID: -1602166447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st nicolas side_8
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 2
+        width: 119
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ca0f59ab874e040bae6291c1aec538
+      internalID: 910265649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st nicolas side_9
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 2
+        width: 119
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7920d83ba98897f42a618072ab216749
+      internalID: 75506537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: st nicolas side_10
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 2
+        width: 119
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c26b93580b66684caaf0e14bea951ba
+      internalID: -188449781
       vertices: []
       indices: 
       edges: []
@@ -351,17 +351,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      st nicolas_0: 239664892
-      st nicolas_1: 1917312147
-      st nicolas_10: 1888290751
-      st nicolas_2: 1122044898
-      st nicolas_3: 1949443005
-      st nicolas_4: 2130843332
-      st nicolas_5: 1438027583
-      st nicolas_6: 797022735
-      st nicolas_7: -1179725149
-      st nicolas_8: -421168452
-      st nicolas_9: -26860900
+      st nicolas side_0: -648692483
+      st nicolas side_1: 1946200957
+      st nicolas side_10: -188449781
+      st nicolas side_2: -834357579
+      st nicolas side_3: -1584796608
+      st nicolas side_4: -106382445
+      st nicolas side_5: -1533138558
+      st nicolas side_6: -1684405511
+      st nicolas side_7: -1602166447
+      st nicolas side_8: 910265649
+      st nicolas side_9: 75506537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
