@@ -17,7 +17,7 @@ public class key : MonoBehaviour
     {
         if (movement.key == true)
         {
-            transform.position = new Vector3(player.transform.position.x + -1, player.transform.position.y, -1 );
+            transform.position = new Vector3(player.transform.position.x + -0.5f, player.transform.position.y, -1 );
         } 
         else
         {
