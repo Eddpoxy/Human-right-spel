@@ -43,8 +43,8 @@ public class movement : MonoBehaviour
         children = false;
         escape = false;
         rb = GetComponent<Rigidbody2D>();
-        randomVariable = Random.Range(0, 4);
-        randomVariablePower = Random.Range(0, 4);
+        randomVariable = Random.Range(0, 10);
+        randomVariablePower = Random.Range(0, 10);
         Debug.Log("Present (" + randomVariablePower + ")");
         Debug.Log("Present (" + randomVariable + ")");
     }
