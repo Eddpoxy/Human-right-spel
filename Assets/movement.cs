@@ -124,7 +124,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name == ("Present (" + randomVariablePower + ")"))
         { 
            speed *= 2;
-           Invoke("powerup", 15f);
+           Invoke("powerup", 25f);
             Instantiate(shoe, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
 
