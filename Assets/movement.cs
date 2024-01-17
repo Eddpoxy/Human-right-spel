@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
@@ -27,6 +28,7 @@ public class movement : MonoBehaviour
     public AudioSource santa;
     public AudioSource walk;
     public AudioSource door;
+    bool gameover;
     Vector2 moveInput;
    
     public static bool escape;
@@ -37,7 +39,7 @@ public class movement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        
+        gameover = false;
         alive = true;
         key = false;
         children = false;
@@ -57,13 +59,18 @@ public class movement : MonoBehaviour
         moveInput.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", moveInput.x);
         animator.SetFloat("Vertical", moveInput.y);
-        animator.SetFloat("Speed", moveInput.sqrMagnitude);
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        animator.SetFloat("Speed", moveInput.sqrMagnitude); 
+        if (gameover != true)
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(horizontalInput, verticalInput);
+            Vector2 movement = new Vector2(horizontalInput, verticalInput);
+            rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse);
+        }
+      
 
-         rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse); 
+       
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
         { 
             if (!walk.isPlaying)
@@ -94,9 +101,11 @@ public class movement : MonoBehaviour
     {
         if (collision.gameObject.name == ("Santa"))
         {
-            Destroy(gameObject);
+           
             alive = false;
+            gameover = true;
             santa.Play();
+            Invoke("powerup", 5f);
         }
         if (collision.gameObject.name.Contains("Present"))
         {
@@ -144,7 +153,12 @@ public class movement : MonoBehaviour
         
     void powerup()
     {
-        speed /= 2;
+        speed /= 2; 
+        if (gameover == true)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentSceneName);
+        }
     }
  
 }
