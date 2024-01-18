@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
@@ -19,6 +20,7 @@ public class movement : MonoBehaviour
     public GameObject basement;
     public GameObject text;
     public GameObject shoe;
+    public GameObject lightbulb;
     [SerializeField]
     public float speed = 50f;
     public float speedPowerUp = 25f;
@@ -32,13 +34,16 @@ public class movement : MonoBehaviour
     bool gameover;
     Vector2 moveInput;
    
-    public static bool escape;
-    int randomVariablePower;
+    public static bool escape; 
+    int randomVariablePowerSpeed;
+    int randomVariablePowerLight;
     int randomVariable;
+    Light2D playerlight;
     float horizontalMove = 0f;
     // Start is called before the first frame update
     void Start()
     {
+        playerlight = GetComponent<Light2D>();
         animator = GetComponent<Animator>();
         gameover = false;
         alive = true;
@@ -47,8 +52,10 @@ public class movement : MonoBehaviour
         escape = false;
         rb = GetComponent<Rigidbody2D>();
         randomVariable = Random.Range(0, 10);
-        randomVariablePower = Random.Range(0, 10);
-        Debug.Log("Present (" + randomVariablePower + ")");
+        randomVariablePowerSpeed = Random.Range(0, 10);
+        randomVariablePowerLight = Random.Range(0, 10);
+        Debug.Log("Present (" + randomVariablePowerSpeed + ")");
+        Debug.Log("Present (" + randomVariablePowerLight + ")");
         Debug.Log("Present (" + randomVariable + ")");
     }
 
@@ -111,8 +118,11 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name.Contains("Present"))
         {
             Destroy(collision.gameObject);
-            if (collision.gameObject.name != "Present (" + randomVariable + ")" && collision.gameObject.name != ("Present (" + randomVariablePower + ")"))
-            Instantiate(text, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            if (collision.gameObject.name != "Present (" + randomVariable + ")" && collision.gameObject.name != "Present (" + randomVariablePowerSpeed + ")" && collision.gameObject.name != ("Present (" + randomVariablePowerLight + ")"))
+                {
+                Instantiate(text, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            }
+          
             tear.Play();
         }
         if (collision.gameObject.name == ("Present (" + randomVariable + ")"))
@@ -122,11 +132,17 @@ public class movement : MonoBehaviour
         } 
         else
         
-        if (collision.gameObject.name == ("Present (" + randomVariablePower + ")"))
+        if (collision.gameObject.name == ("Present (" + randomVariablePowerSpeed + ")"))
         { 
            speed *= 2;
            Invoke("powerup", 25f);
             Instantiate(shoe, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        if (collision.gameObject.name == ("Present (" + randomVariablePowerLight + ")"))
+        {
+            playerlight.pointLightOuterRadius *= 2;
+            Invoke("lightPower", 35f);
+            Instantiate(lightbulb, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
 
         if (collision.gameObject.name == ("basement") && key == true)
@@ -161,6 +177,11 @@ public class movement : MonoBehaviour
             SceneManager.LoadScene(currentSceneName);
         }
     }
- 
+    void lightPower()
+    {
+        playerlight.pointLightOuterRadius /= 2;
+    }
+
+
 }
 
