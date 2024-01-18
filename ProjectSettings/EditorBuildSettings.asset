@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Edwards scene.unity
     guid: 8de3fa36ade9dc14394b0757e9bb5fd5
+  - enabled: 1
+    path: Assets/Scenes/Theos scene.unity
+    guid: 3560be6ff0843c742b59d2dd51d13298
   m_configObjects: {}

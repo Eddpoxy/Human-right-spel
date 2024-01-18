@@ -13,6 +13,7 @@ using Random = UnityEngine.Random;
 public class movement : MonoBehaviour
 {
     Rigidbody2D rb;
+    public string winner;
     public Animator animator;
     public NavMeshSurface navMesh;
     public GameObject basement;
@@ -143,9 +144,9 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name == ("Exit") && children == true)
         {
             escape = true;
-            
-            Destroy(gameObject);
-            
+
+            SceneManager.LoadScene(winner);
+
         }
 
     }
