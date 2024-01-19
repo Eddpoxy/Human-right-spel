@@ -14,13 +14,17 @@ public class play : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            SceneManager.LoadScene(sceneNumber);
+        }
     }
-
+   
+    
     private void OnMouseDown()
     {
-        SceneManager.LoadScene(sceneNumber);
+       
     }
 }
