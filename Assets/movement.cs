@@ -174,7 +174,7 @@ public class movement : MonoBehaviour
         if (gameover == true)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
+            SceneManager.LoadScene(winner);
         }
     }
     void lightPower()
