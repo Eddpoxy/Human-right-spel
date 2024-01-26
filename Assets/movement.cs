@@ -18,16 +18,14 @@ public class movement : MonoBehaviour
     public Animator animator;
     public NavMeshSurface navMesh;
     public GameObject basement;
-    public GameObject text;
-    public GameObject shoe;
-    public GameObject lightbulb;
+
     [SerializeField]
     public float speed = 50f;
     public float speedPowerUp = 25f;
     public static bool alive;
     public static bool key;
     public static bool children;
-    public AudioSource tear;
+    
     public AudioSource santa;
     public AudioSource walk;
     public AudioSource door;
@@ -35,9 +33,9 @@ public class movement : MonoBehaviour
     Vector2 moveInput;
    
     public static bool escape; 
-    int randomVariablePowerSpeed;
-    int randomVariablePowerLight;
-    int randomVariable;
+    static public int randomVariablePowerSpeed;
+    static public int randomVariablePowerLight;
+    static public int randomVariable;
     Light2D playerlight;
     float horizontalMove = 0f;
     // Start is called before the first frame update
@@ -107,6 +105,23 @@ public class movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.name == ("Present (" + randomVariablePowerSpeed + ")"))
+        {
+            speed *= 2;
+            Invoke("powerup", 25f);
+         
+        }
+        if (collision.gameObject.name == ("Present (" + randomVariablePowerLight + ")"))
+        {
+            playerlight.pointLightOuterRadius *= 2;
+            Invoke("lightPower", 35f);
+          
+        }
+        if (collision.gameObject.name == ("Present (" + randomVariable + ")"))
+        {
+            
+            key = true;
+        }
         if (collision.gameObject.name == ("Santa"))
         {
            
@@ -115,35 +130,7 @@ public class movement : MonoBehaviour
             santa.Play();
             Invoke("powerup", 5f);
         }
-        if (collision.gameObject.name.Contains("Present"))
-        {
-            Destroy(collision.gameObject);
-            if (collision.gameObject.name != "Present (" + randomVariable + ")" && collision.gameObject.name != "Present (" + randomVariablePowerSpeed + ")" && collision.gameObject.name != ("Present (" + randomVariablePowerLight + ")"))
-                {
-                Instantiate(text, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-            }
-          
-            tear.Play();
-        }
-        if (collision.gameObject.name == ("Present (" + randomVariable + ")"))
-        {
-            Destroy(collision.gameObject);
-            key = true;
-        } 
-        else
-        
-        if (collision.gameObject.name == ("Present (" + randomVariablePowerSpeed + ")"))
-        { 
-           speed *= 2;
-           Invoke("powerup", 25f);
-            Instantiate(shoe, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-        }
-        if (collision.gameObject.name == ("Present (" + randomVariablePowerLight + ")"))
-        {
-            playerlight.pointLightOuterRadius *= 2;
-            Invoke("lightPower", 35f);
-            Instantiate(lightbulb, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-        }
+       
 
         if (collision.gameObject.name == ("basement") && key == true)
         {
