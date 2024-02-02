@@ -37,7 +37,7 @@ public class movement : MonoBehaviour
     static public int randomVariablePowerLight;
     static public int randomVariable;
     Light2D playerlight;
-    float horizontalMove = 0f;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -49,50 +49,18 @@ public class movement : MonoBehaviour
         children = false;
         escape = false;
         rb = GetComponent<Rigidbody2D>();
-        randomVariable = Random.Range(0, 10);
-        randomVariablePowerSpeed = Random.Range(0, 10);
-        randomVariablePowerLight = Random.Range(0, 10);
-        Debug.Log("Present (" + randomVariablePowerSpeed + ")");
-        Debug.Log("Present (" + randomVariablePowerLight + ")");
-        Debug.Log("Present (" + randomVariable + ")");
+        RandomVariables();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        MovePlayer();
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", moveInput.x);
         animator.SetFloat("Vertical", moveInput.y);
         animator.SetFloat("Speed", moveInput.sqrMagnitude); 
-        if (gameover != true)
-        {
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
-
-            Vector2 movement = new Vector2(horizontalInput, verticalInput);
-            rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse);
-        }
-      
-
-       
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
-        { 
-            if (!walk.isPlaying)
-            {
-                walk.Play();
-            }
-           
-        }  
-        else
-        {
-            walk.Stop();
-        }
-      
-        
-     
-
         if (Powerup.isPickedUp == true)
         {
             speed += speedPowerUp;
@@ -124,11 +92,8 @@ public class movement : MonoBehaviour
         }
         if (collision.gameObject.name == ("Santa"))
         {
-           
-            alive = false;
-            gameover = true;
-            santa.Play();
-            Invoke("powerup", 5f);
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(winner);
         }
        
 
@@ -153,22 +118,46 @@ public class movement : MonoBehaviour
         }
 
     }
+    void MovePlayer()
+    {
+        if (gameover != true)
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
-        
+            Vector2 movement = new Vector2(horizontalInput, verticalInput);
+            rb.AddForce(movement * speed * Time.deltaTime, ForceMode2D.Impulse);
+        }
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
+        {
+            if (!walk.isPlaying)
+            {
+                walk.Play();
+            }
+        }
+        else
+        {
+            walk.Stop();
+        }
+    }
+
     void powerup()
     {
         speed /= 2; 
-        if (gameover == true)
-        {
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(winner);
-        }
     }
     void lightPower()
     {
         playerlight.pointLightOuterRadius /= 2;
     }
-
+    void RandomVariables()
+    {
+        randomVariable = Random.Range(0, 10);
+        randomVariablePowerSpeed = Random.Range(0, 10);
+        randomVariablePowerLight = Random.Range(0, 10);
+        Debug.Log("Present (" + randomVariablePowerSpeed + ")");
+        Debug.Log("Present (" + randomVariablePowerLight + ")");
+        Debug.Log("Present (" + randomVariable + ")");
+    }
 
 }
 

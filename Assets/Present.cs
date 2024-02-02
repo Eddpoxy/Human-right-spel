@@ -19,33 +19,22 @@ public class Present : MonoBehaviour
     {
         if (collision.gameObject.name == ("Player"))
         {
-            
+            animator.Play("Present anim");
+            tear.Play();
             if (gameObject.name != ("Present (" + movement.randomVariable + ")") && gameObject.name != ("Present (" + movement.randomVariablePowerSpeed + ")") && gameObject.name != ("Present (" + movement.randomVariablePowerLight + ")"))
             {
                 Instantiate(text, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-                tear.Play();
-                animator.Play("Present anim");
-                Invoke("destroyGift", 2.5f);
-                
             }
 
             if (gameObject.name == ("Present (" + movement.randomVariablePowerSpeed + ")"))
             {
-
-
                 Instantiate(shoe, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-                tear.Play();
-                animator.Play("Present anim");
-                Invoke("destroyGift", 2.5f);
             }
             if (gameObject.name == ("Present (" + movement.randomVariablePowerLight + ")"))
             {
-
                 Instantiate(lightbulb, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-                tear.Play();
-                animator.Play("Present anim");
-                Invoke("destroyGift", 2.5f);
             }
+            Invoke("destroyGift", 2.5f);
         }
 
     } 
