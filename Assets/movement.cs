@@ -15,6 +15,7 @@ public class movement : MonoBehaviour
 {
     Rigidbody2D rb;
     public string winner;
+    public string Gameover;
     public Animator animator;
     public NavMeshSurface navMesh;
     public GameObject basement;
@@ -93,7 +94,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.name == ("Santa"))
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(winner);
+            SceneManager.LoadScene(Gameover);
         }
        
 
