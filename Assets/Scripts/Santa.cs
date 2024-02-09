@@ -7,6 +7,7 @@ public class Santa : MonoBehaviour
 {
     [SerializeField] Transform target;
     NavMeshAgent agent;
+    movement movement;
 
 
     
@@ -16,14 +17,18 @@ public class Santa : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         
         agent.updateRotation = false;
-        agent.updateUpAxis = false; 
+        agent.updateUpAxis = false;
+        agent.speed = 3.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
         agent.SetDestination(target.position);
-     
+     if (movement.children == true)
+        {
+            agent.speed = 4.5f;
+        }
     } 
   
 }
